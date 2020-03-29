@@ -1,5 +1,9 @@
 // if node ('') use any slave DOTNET
 node ('') {
+    stage('SCM') {
+        echo 'Building...'
+    }
+
     stage('Build') {
         echo 'Building...'
     }
