@@ -1,5 +1,5 @@
-// if node ('') use any slave
-node ('DOTNET') {
+// if node ('') use any slave DOTNET
+node ('') {
     stage('Build') {
         echo 'Building...'
     }
