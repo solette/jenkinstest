@@ -1,11 +1,15 @@
 // if node ('') use any slave DOTNET
 node ('') {
+    
     stage('SCM') {
         echo 'Building...'
+        git branch: '${branch}', url: 'https://github.com/solette/jenkinstest.git'
     }
 
     stage('Build') {
         echo 'Building...'
+        sh 'dotnet --version'
+        sh 'dotnet build ConsoleApp1'
         echo 'Building for develop...'
     }
     
