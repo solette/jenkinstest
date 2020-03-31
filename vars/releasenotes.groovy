@@ -1,6 +1,7 @@
 import java.io.*;
 import groovy.io.*;
 
+@NonCPS
 def call(Map config=[:]) {
     // "C:\\repository\\private\\jenkinslab\\jenkinstest\\ConsoleApp1"
     def dir = new File(pwd());
