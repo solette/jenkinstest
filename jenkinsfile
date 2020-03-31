@@ -9,8 +9,8 @@ node ('') {
 
         stage('Build') {
 			echo 'Building...'
-            sh '''dotnet --version'''
-            sh '''dotnet build ConsoleApp1'''
+            bat '''dotnet --version'''
+            bat '''dotnet build ConsoleApp1'''
             echo 'Building for develop...'
         }
 
