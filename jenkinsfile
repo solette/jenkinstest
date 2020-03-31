@@ -1,6 +1,15 @@
 // if node ('') use any slave DOTNET
+// bat used in windows jenkins, for unix use sh
+import java.io.*;
+import groovy.io.*;
+
+def dir = new File("C:\repository\\private\\jenkinslab\\jenkinstest\\ConsoleApp1");
+
+dir.eachFileResource(FileType.ANY) { file ->
+	println "${file.name} \t ${file.length()} ";
+}
+
 node ('') {
-	 
 
 		stage('SCM') {
 			echo 'Building...'
@@ -9,7 +18,7 @@ node ('') {
 
         stage('Build') {
 			echo 'Building...'
-            bat '''dotnet --version'''
+            bat '''dotnet --version''' 
             bat '''dotnet build ConsoleApp1'''
             echo 'Building for develop...'
         }
