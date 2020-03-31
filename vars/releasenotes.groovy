@@ -3,7 +3,7 @@ import groovy.io.*;
 
 def call(Map config=[:]) {
     // "C:\\repository\\private\\jenkinslab\\jenkinstest\\ConsoleApp1"
-    def dir = new File(pwd);
+    def dir = new File(pwd());
     new File( "${dir.path}/releasenotes.txt" ).withWriter('utf-8'){
     	writer ->
     	dir.eachFileRecurse {
