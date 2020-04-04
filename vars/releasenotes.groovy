@@ -29,7 +29,7 @@ def call(Map config=[:]) {
     for(change in changeLogSets) {
         def entries = change.items;
         for(entry in entries) {
-            echo "${entry.commitId} by ${entry.author} on ${new Date(entrytimestamp)}: ${entry.msg}"
+            echo "${entry.commitId} by ${entry.author} on ${new Date(entry.timestamp)}: ${entry.msg}"
             for (file in entry.effectedFiles) {
                 echo " ${file.editType.name} ${file.path}"
             }
