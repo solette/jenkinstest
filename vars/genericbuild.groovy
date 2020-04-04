@@ -13,7 +13,7 @@ node ('') {
         stage('Build') {
 			echo 'Building...'
             bat "dotnet --version"
-            bat dotnet build ${config.target}" 
+            bat "dotnet build ${config.target}" 
             echo 'Building for develop...'
 			releasenotes(changes: "true");
         }
