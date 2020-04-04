@@ -24,4 +24,21 @@ def call(Map config=[:]) {
     if (config.changes != "false") {
         echo "Found changes";
     }
+    
+    def changeLogSets = currentBuild.changeSets;
+    for(change in changeLogSets) {
+        def entries = change.items;
+        for(entry in entries) {
+            echo "${entry.commitId} by ${entry.author} on ${new Date(entrytimestamp)}: ${entry.msg}"
+            for (file in entry.effectedFiles) {
+                echo " ${file.editType.name} ${file.path}"
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
 }
