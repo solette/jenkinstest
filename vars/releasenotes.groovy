@@ -8,13 +8,15 @@ def call(Map config=[:]) {
     println("FilePath: ${dir.path}/releasenotes.txt");
     new File( "${dir.path}/releasenotes.txt" ).withWriter('utf-8'){
     	writer ->
-    	dir.eachFileRecurse {
-    		file ->
+    	dir.eachFileRecurse { file ->
     		if (file.isDirectory()) {
     		    writer.writeLine("${file.name}")
     		} else {
     		    writer.writeLine("\t${file.name}\t${file.length()}")
     		}
     	}
+    }
+    if (config.changes != "false") {
+        echo "changes";
     }
 }

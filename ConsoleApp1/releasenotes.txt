@@ -1,25 +1,25 @@
-.vs
-ConsoleApp1
-DesignTimeBuild
+	.vs	0
+	ConsoleApp1	0
+	DesignTimeBuild	0
 	.dtbcache	224146
-v16
+	v16	0
 	.suo	19968
-Server
-sqlite3
+	Server	0
+	sqlite3	4096
 	db.lock	0
 	storage.ide	684032
-ConsoleApp1
-bin
-Debug
-netcoreapp3.1
+	ConsoleApp1	4096
+	bin	0
+	Debug	0
+	netcoreapp3.1	0
 	ConsoleApp1.csproj	178
-obj
+	obj	4096
 	ConsoleApp1.csproj.nuget.cache	149
 	ConsoleApp1.csproj.nuget.dgspec.json	2076
 	ConsoleApp1.csproj.nuget.g.props	1118
 	ConsoleApp1.csproj.nuget.g.targets	294
-Debug
-netcoreapp3.1
+	Debug	0
+	netcoreapp3.1	4096
 	ConsoleApp1.AssemblyInfo.cs	1006
 	ConsoleApp1.AssemblyInfoInputs.cache	42
 	ConsoleApp1.assets.cache	140
