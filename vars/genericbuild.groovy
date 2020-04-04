@@ -12,8 +12,8 @@ node ('') {
 
         stage('Build') {
 			echo 'Building...'
-            bat '''dotnet --version''' 
-            bat '''dotnet build ConsoleApp1'''
+            bat "dotnet --version"
+            bat dotnet build ${config.target}" 
             echo 'Building for develop...'
 			releasenotes(changes: "true");
         }
