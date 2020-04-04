@@ -12,7 +12,7 @@ node ('') {
             bat '''dotnet --version''' 
             bat '''dotnet build ConsoleApp1'''
             echo 'Building for develop...'
-			releasenotes(changes: "false");
+			releasenotes(changes: "true");
         }
 
         stage('test') {
