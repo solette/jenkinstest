@@ -30,7 +30,7 @@ def call(Map config=[:]) {
         def entries = change.items;
         for(entry in entries) {
             echo "${entry.commitId} by ${entry.author} on ${new Date(entry.timestamp)}: ${entry.msg}"
-            for (file in entry.effectedFiles) {
+            for (file in entry.affectedFiles) {
                 echo " ${file.editType.name} ${file.path}"
             }
         }
